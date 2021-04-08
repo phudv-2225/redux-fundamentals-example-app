@@ -7,10 +7,8 @@ import './api/server'
 
 import store from './store'
 
-console.log('Dispatching action')
-store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about actions' })
-console.log('State after dispatch: ', store.getState())
-console.log('Dispatch complete')
+const dispatchResult = store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about actions' })
+console.log(dispatchResult)
 
 ReactDOM.render(
   <React.StrictMode>
